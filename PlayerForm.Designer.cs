@@ -36,7 +36,7 @@
             //
             // webView
             //
-            webView.AllowExternalDrop = true;
+            webView.AllowExternalDrop = false;
             webView.CreationProperties = null;
             webView.DefaultBackgroundColor = Color.White;
             webView.Dock = DockStyle.Fill;

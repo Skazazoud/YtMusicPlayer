@@ -102,6 +102,7 @@ namespace YtMusicPlayer
             var environment = await CoreWebView2Environment.CreateAsync(userDataFolder: userDataFolder, options: environmentOptions);
             await webView.EnsureCoreWebView2Async(environment);
             RequestBlockingService.Install(webView.CoreWebView2);
+            NavigationGuardService.Install(webView.CoreWebView2);
             webView.CoreWebView2.ProcessFailed += CoreWebView2_ProcessFailed;
 
             // The exe's own embedded icon (see <ApplicationIcon> in the csproj) is the
